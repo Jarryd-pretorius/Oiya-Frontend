@@ -1,0 +1,49 @@
+
+button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+    padding: 1rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    max-width: 150px;
+    font-size: 1.2rem;
+    align-items: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    justify-content: center;
+    border: none;
+	outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+ion-icon {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.btn-alarm {
+    background-color: #e23636;
+}
+.btn-alarm:active {
+    background-color: #b14242;
+    transition: 200ms;
+}
+
+.btn-start {
+    background-color: rgb(5, 135, 5);
+}
+
+.btn-start:active {
+    transition: 200ms;
+    background-color: rgb(19, 101, 19);
+}
+
+.btn-standard {
+    background-color: rgb(61, 166, 236);
+}
+.btn-standard:active {
+    background-color: rgb(72, 152, 205);
+}

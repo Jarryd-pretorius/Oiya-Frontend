@@ -1,0 +1,12 @@
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    background-color: #262829;
+    box-shadow: 3px -3px 3px 0  rgb(30, 30, 30);
+
+}
