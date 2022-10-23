@@ -2,6 +2,8 @@
 .footer {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 1rem;
     margin-top: auto;
     height: 100px;
     width: 100%;
@@ -9,4 +11,8 @@
     background-color: #262829;
     box-shadow: 3px -3px 3px 0  rgb(30, 30, 30);
 
+}
+
+a {
+    text-decoration: none;
 }

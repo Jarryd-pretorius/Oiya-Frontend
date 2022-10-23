@@ -3,6 +3,7 @@ button {
     width: 100%;
     display: flex;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 0.75rem;
     padding: 1rem 1rem;
     border-radius: 0.75rem;
@@ -19,15 +20,35 @@ button {
     cursor: pointer;
 }
 
+.large-button {
+    padding: 2rem 2rem;
+}
+
 ion-icon {
     display: flex;
     font-size: 1.5rem;
 }
 
-.btn-alarm {
+.btn-stop {
     background-color: #e23636;
 }
-.btn-alarm:active {
+
+.alarm-inactive {
+    background-color: grey;
+}
+
+.alarm-active {
+    animation: blinker 1s linear infinite;
+    background-color: #e23636;
+  }
+  
+  @keyframes blinker {
+    100% {
+        background-color: grey;
+    }
+  }
+
+.btn-stop:active {
     background-color: #b14242;
     transition: 200ms;
 }
