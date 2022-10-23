@@ -2,8 +2,71 @@
 .header {
     display: flex;
     flex-direction: row;
-    height: 100px;
     width: 100%;
     background-color: #262829;
     box-shadow: 2px 2px 10px 0 rgb(30, 30, 30);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.Safety-data {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-right: 0.5rem;
+    background-color: rgb(5, 135, 5);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+
+.operator {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-right: 0.5rem;
+    background-color: rgb(61, 166, 236);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+.safety-status {
+    padding: 1rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    background-color: grey; 
+    white-space: nowrap;
+    color: white;
+}
+
+.Automatic {
+    display: flex;
+    padding: 1rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(61, 166, 236);
+}
+
+.Manual {
+    display: flex;
+    padding: 1rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    background-color: rgb(214, 160, 67); 
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
