@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
     <head>
-    <title>Controls</title>
+    <title>Machine UI</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../styles/containers.css" />
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/right-panel.css" />
-    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/buttons.css" />
+    <link rel="stylesheet" href="../styles/keyboard.css"/>
     </head>
     <body>
         <div class="app-container">
@@ -15,6 +16,7 @@
                 <div class="header">
                     <div class="status-container">
                         <div class="safety-status">Safety tripped</div>
+                        <div class="popuptext" id="myPopup">Machine status changed!</div>
                         <div id="machine-status" class="machine-status"></div>
                     </div>
                     <div class="data-container">
@@ -23,16 +25,16 @@
                     </div>
                 </div>
                 <div class="center-panel">
-                        <h2 style="color: white" class="title">Clamp Manual Control</h2>
-                        <div class="buttons-container">
-                            <button class="btn-standard large-button">Clamp</button>
-                            <button class="btn-standard large-button">Release</button>
-                        </div>
-                        <h2 style="color: white" >Saw Blade Motor Manual Control</h2>
-                        <div class="buttons-container">
-                            <button class="btn-standard large-button">Run</button>
-                            <button class="btn-standard large-button">Stop</button>
-                        </div>
+                    <h2 style="color: white" class="title">Clamp Manual Control</h2>
+                    <div class="buttons-container">
+                        <button class="btn-standard large-button">Clamp</button>
+                        <button class="btn-standard large-button">Release</button>
+                    </div>
+                    <h2 style="color: white" >Saw Blade Motor Manual Control</h2>
+                    <div class="buttons-container">
+                        <button class="btn-standard large-button">Run</button>
+                        <button class="btn-standard large-button">Stop</button>
+                    </div>
                 </div>
                 <div class="footer">
                     <a href="./" class = "link">
@@ -40,9 +42,9 @@
                         Main
                         </Button>
                     </a>
-                    <a href="./control.html" class = "link">
+                    <a href="./logs.html" class = "link">
                         <Button class="btn-standard large-button">
-                        Settings
+                        Alarm log
                         </Button>
                     </a>
                     <a href="./control.html">
@@ -84,10 +86,14 @@
             </div>
         </div>
         <script src="../Scripts/scripts.js"></script>
+        <script src="../Scripts/keyboard.js" ></script>
+        <script src="../Scripts/numPad.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
+
+
 
 
 

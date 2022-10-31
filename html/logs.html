@@ -19,45 +19,22 @@
                         <div class="popuptext" id="myPopup">Machine status changed!</div>
                         <div id="machine-status" class="machine-status"></div>
                     </div>
-                    <div class="machine-data-popup" id="dataPopup">
-                        <div class="Automatic">Machine Data: 1000 RPM</div>
-                        <div class="machine-data-container">
-                            <button class="btn-standard"> < Reverse</button>
-                            <button class="btn-standard">Forward ></button>
-                        </div>
-                        <div class="machine-data-container">
-                            <textarea id="acceleration" class="use-numPad-input text-area" placeholder="Acceleration..." ></textarea>
-                            <button class="btn-standard">Enter acceleration</button>
-                        </div>
-                        <div class="machine-data-container">
-                            <textarea id="acceleration" class="use-numPad-input text-area" placeholder="Speed..." ></textarea>
-                            <button class="btn-standard">Enter speed</button>
-                        </div>
-                    </div>
                     <div class="data-container">
                         <div class="Safety-data">Status normal...</div>
                         <div class="operator">Logged in user - Operator</div>
                     </div>
                 </div>
-                <div class="center-panel-main" style="flex-direction: row;" id="centerPanel">
-                    <table class="data-table">
+                <div class="center-panel">
+                    <table class="data-table" style="height: 80%;">
                         <thead>
                             <tr>
-                            <th>Description</th>
-                            <th>Amount</th>
+                                <th>Time</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
-                        <tbody id="table-data">
-
+                        <tbody id="alarm-data">
                         </tbody>
                     </table>
-                    <div class="input-container">
-                        <h3>Description</h3>
-                        <textarea id="description" class="use-keyboard-input text-area" placeholder="enter text..." ></textarea>
-                        <h3>Amount</h3>
-                        <textarea  id="amount" class="use-numPad-input text-area" placeholder="enter amount.."></textarea>
-                        <button style="margin-top: 0;" class="btn-standard" onclick="enterTableData()">Enter data</button>
-                    </div>
                 </div>
                 <div class="footer">
                     <a href="./" class = "link">
@@ -65,7 +42,7 @@
                         Main
                         </Button>
                     </a>
-                    <a href="./logs.html" class = "link">
+                    <a href="./control.html" class = "link">
                         <Button class="btn-standard large-button">
                         Alarm log
                         </Button>
@@ -75,7 +52,6 @@
                         Controls
                         </Button>
                     </a>
-                    <button class="btn-standard large-button" onclick="openData()">Data</button>
                 </div>
             </div>
             <div class="right-panel">

@@ -9,10 +9,10 @@ button {
     border-radius: 0.75rem;
     font-weight: 600;
     max-width: 150px;
-    font-size: 1.2rem;
     align-items: center;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    font-size: 1rem;
     justify-content: center;
     border: none;
 	outline: none;
@@ -21,7 +21,7 @@ button {
 }
 
 .large-button {
-    padding: 2rem 2rem;
+    padding: 1.5rem;
 }
 
 ion-icon {

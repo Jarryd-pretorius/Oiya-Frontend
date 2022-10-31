@@ -3,8 +3,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 5px 0;
-    background-color: rgb(51, 102, 135);
+    padding: 5px 3rem;
+    background-color: rgb(40, 82, 110);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     user-select: none;
     transition: bottom 0.4s;
@@ -76,8 +76,12 @@
   background-color: #2e2e2e;
   border-radius: 5px;
   color: white;
-  width: 20%;
+  width: 80%;
   resize: none;
   padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
   outline: none;
 }

@@ -16,7 +16,7 @@
 .oiya-logo {
     display: flex;
     margin-top: auto;
-    margin-bottom: 0.5rem;
-    width: 100px;
-    height: 100px;
+    margin-bottom: 1rem;
+    width: 10vh;
+    height: 10vh;
 }
