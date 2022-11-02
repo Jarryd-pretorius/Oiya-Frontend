@@ -19,10 +19,16 @@ function updateMachineStatus(machineStatus) {
     machine.className = machineStatus
     machine.innerHTML = machineStatus
     openPopup()
-    setTimeout(openPopup, 5000)
 }
 
-function openPopup() {
+function openPopup(message) {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+    popup.innerHTML = message
+    setTimeout(closePopup, 5000)
+}
+
+function closePopup() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
@@ -44,20 +50,26 @@ function enterTableData() {
   let amount = document.getElementById("description").value;
   let description = document.getElementById("amount").value;
   const table = [{description: description, amount: amount}]
-    renderTableData(table, "table-data")
-}
-
-function enterAlarmLogs(alarmData) {
-    renderTableData(alarmData, "alarm-data")
+    renderTableData("table-data")
 }
 
 
-function renderTableData (dataArray, table) {
-    const tableBody = document.getElementById(table);
+function renderAlarmLogs(alarmData) {
+    const tableBody = document.getElementById("alarm-data");
     let html = ''
 
     for(let object of dataArray) {
-        html += `<tr><td>${object.amount}</td><td>${object.description}</td></tr>`
+        html += `<tr><td>${object.time}</td><td>${object.description}</td></tr>`
     }
+    tableBody.innerHTML = html
+}
+
+
+function renderTableData (obj) {
+    const tableBody = document.getElementById("table-data");
+    let html = ''
+    
+        html += `<tr><td>${obj.description}</td><td>${obj.value}</td></tr>`
+    
     tableBody.innerHTML = html
 }

@@ -2,6 +2,7 @@ const Keyboard = {
     elements: {
         main: null,
         keysContainer: null,
+        textArea: null,
         keys: []
     },
 
@@ -18,10 +19,13 @@ const Keyboard = {
     init() {
         // Create main elements
         this.elements.main = document.createElement("div");
+        this.elements.textArea = document.createElement("textarea");
         this.elements.keysContainer = document.createElement("div");
 
         // Setup main elements
         this.elements.main.classList.add("keyboard", "keyboard--hidden");
+        this.elements.textArea.classList.add("keyboard-text", "keyboard--hidden");
+        this.elements.textArea.id = "keyboard-text"
         this.elements.keysContainer.classList.add("keyboard__keys");
         this.elements.keysContainer.appendChild(this._createKeys());
 
@@ -29,6 +33,7 @@ const Keyboard = {
 
         // Add to DOM
         this.elements.main.appendChild(this.elements.keysContainer);
+        document.body.appendChild(this.elements.textArea);
         document.body.appendChild(this.elements.main);
 
         // Automatically use keyboard for elements with .use-keyboard-input
@@ -36,6 +41,7 @@ const Keyboard = {
             element.addEventListener("focus", () => {
                 this.open(element.value, currentValue => {
                     element.value = currentValue;
+                    document.getElementById("keyboard-text").innerHTML = currentValue
                 });
             });
         });
@@ -162,6 +168,7 @@ const Keyboard = {
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
         this.elements.main.classList.remove("keyboard--hidden");
+        this.elements.textArea.classList.remove("keyboard--hidden");
     },
 
     close() {
@@ -169,6 +176,7 @@ const Keyboard = {
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
         this.elements.main.classList.add("keyboard--hidden");
+        this.elements.textArea.classList.add("keyboard--hidden");
     }
 };
 
