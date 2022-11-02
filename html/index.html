@@ -16,7 +16,7 @@
                 <div class="header">
                     <div class="status-container">
                         <div class="safety-status">Safety tripped</div>
-                        <div class="popuptext" id="myPopup">Machine status changed!</div>
+                        <div class="popuptext" id="myPopup"></div>
                         <div id="machine-status" class="machine-status"></div>
                     </div>
                     <div class="machine-data-popup" id="dataPopup">
@@ -56,7 +56,7 @@
                         <textarea id="description" class="use-keyboard-input text-area" placeholder="enter text..." ></textarea>
                         <h3>Amount</h3>
                         <textarea  id="amount" class="use-numPad-input text-area" placeholder="enter amount.."></textarea>
-                        <button style="margin-top: 0;" class="btn-standard" onclick="enterTableData()">Enter data</button>
+                        <button style="margin-top: 0;" class="btn-standard" id="data-button">Enter data</button>
                     </div>
                 </div>
                 <div class="footer">
@@ -112,6 +112,7 @@
         <script src="../Scripts/scripts.js"></script>
         <script src="../Scripts/keyboard.js" ></script>
         <script src="../Scripts/numPad.js"></script>
+        <script src="../Scripts/server.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>

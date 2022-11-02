@@ -1,6 +1,7 @@
 const NumPad = {
     elements: {
         main: null,
+        textArea: null,
         keysContainer: null,
         keys: []
     },
@@ -18,23 +19,30 @@ const NumPad = {
     init() {
         // Create main elements
         this.elements.main = document.createElement("div");
+        this.elements.textArea = document.createElement("textarea");
         this.elements.keysContainer = document.createElement("div");
 
         // Setup main elements
         this.elements.main.classList.add("keyboard", "keyboard--hidden");
         this.elements.keysContainer.classList.add("keyboard__keys");
+        this.elements.textArea.classList.add("numPad-text", "keyboard--hidden");
+        this.elements.textArea.id = "numPad-text"
+        this.elements.textArea.placeHolder = "numPad-text"
         this.elements.keysContainer.appendChild(this._createKeys());
 
         this.elements.keys = this.elements.keysContainer.querySelectorAll(".keyboard__key");
 
         // Add to DOM
         this.elements.main.appendChild(this.elements.keysContainer);
+        document.body.appendChild(this.elements.textArea);
         document.body.appendChild(this.elements.main);
 
         document.querySelectorAll(".use-numPad-input").forEach(element => {
             element.addEventListener("focus", () => {
                 this.open(element.value, currentValue => {
                     element.value = currentValue;
+                    document.getElementById("numPad-text").innerHTML = currentValue
+
                 });
             });
         });
@@ -159,6 +167,7 @@ const NumPad = {
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
         this.elements.main.classList.remove("keyboard--hidden");
+        this.elements.textArea.classList.remove("keyboard--hidden");
     },
 
     close() {
@@ -166,6 +175,7 @@ const NumPad = {
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
         this.elements.main.classList.add("keyboard--hidden");
+        this.elements.textArea.classList.add("keyboard--hidden");
     }
 };
 

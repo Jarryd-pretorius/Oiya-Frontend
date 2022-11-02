@@ -10,6 +10,54 @@
     transition: bottom 0.4s;
 }
 
+.numPad-text {
+    position: fixed;
+    display: flex;
+    left: 40%;
+    bottom: 21%;
+    width: 20%;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    min-height: 50px;
+    padding: 5px 3rem;
+    background-color: rgb(103, 110, 114);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    border: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+   
+}
+
+.keyboard-text {
+    position: fixed;
+    display: flex;
+    left: 35%;
+    bottom: 33%;
+    width: 30%;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    min-height: 50px;
+    padding: 5px 3rem;
+    background-color: rgb(103, 110, 114);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    border: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+   
+}
+
 .keyboard--hidden {
     bottom: -100%;
 }
