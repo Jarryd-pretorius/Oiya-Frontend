@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="right-panel">
-                <button id="alarm" class="alarm-inactive" >
+                <button id="alarm" class="alarm-inactive"  onclick="goAlack()">
                     <div>Alarm</div>
                     <div><ion-icon name="alert-circle"></ion-icon></div>
                 </button>
@@ -72,22 +72,13 @@
                     <span>Reset</span>
                     <ion-icon name="arrow-redo-circle"></ion-icon>
                 </button>
-                <button class="btn-standard">
-                    <span>Load Coil</span>
-                    <ion-icon name="download"></ion-icon>
-                </button>
-                <button class="btn-standard" onclick="updateMachineStatus('Automatic')">
-                    <span>Automatic</span>
-                </button>
-                <button class="btn-standard" onclick="updateMachineStatus('Manual')">
-                    <span>Manual</span>
-                </button>
                 <img class="oiya-logo" src="../images/OIYAicon.png" alt="Oiya logo">
             </div>
         </div>
         <script src="../Scripts/scripts.js"></script>
         <script src="../Scripts/keyboard.js" ></script>
         <script src="../Scripts/numPad.js"></script>
+        <script src="../Scripts/gearheadClient.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>

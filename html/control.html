@@ -25,7 +25,11 @@
                     </div>
                 </div>
                 <div class="center-panel">
-                    <h2 style="color: white" class="title">Clamp Manual Control</h2>
+                    <img src="../images/ARMRollformer.png" alt="Oiya logo" class="machine-image">
+                    <img src="../images/ACMotor.svg" alt="Oiya logo" class="motor-0" id="motor-icon">
+
+
+                    <!-- <h2 style="color: white" class="title">Clamp Manual Control</h2>
                     <div class="buttons-container">
                         <button class="btn-standard large-button">Clamp</button>
                         <button class="btn-standard large-button">Release</button>
@@ -34,7 +38,7 @@
                     <div class="buttons-container">
                         <button class="btn-standard large-button">Run</button>
                         <button class="btn-standard large-button">Stop</button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="footer">
                     <a href="./" class = "link">
@@ -55,7 +59,7 @@
                 </div>
             </div>
             <div class="right-panel">
-                <button id="alarm" class="alarm-inactive" >
+                <button id="alarm" class="alarm-inactive"  onclick="goAlack()">
                     <div>Alarm</div>
                     <div><ion-icon name="alert-circle"></ion-icon></div>
                 </button>
@@ -71,16 +75,6 @@
                 <button class="btn-standard">
                     <span>Reset</span>
                     <ion-icon name="arrow-redo-circle"></ion-icon>
-                </button>
-                <button class="btn-standard">
-                    <span>Load Coil</span>
-                    <ion-icon name="download"></ion-icon>
-                </button>
-                <button class="btn-standard" onclick="updateMachineStatus('Automatic')">
-                    <span>Automatic</span>
-                </button>
-                <button class="btn-standard" onclick="updateMachineStatus('Manual')">
-                    <span>Manual</span>
                 </button>
                 <img class="oiya-logo" src="../images/OIYAicon.png" alt="Oiya logo">
             </div>

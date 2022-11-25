@@ -21,7 +21,7 @@ button {
 }
 
 .large-button {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 ion-icon {
@@ -37,16 +37,51 @@ ion-icon {
     background-color: grey;
 }
 
+.machine-normal {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: green;
+}
+
+.machine-warning {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(211, 150, 35);
+    animation: blinker 1s linear infinite;
+
+}
+
+.machine-disabled {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: grey;
+}
+
 .alarm-active {
     animation: blinker 1s linear infinite;
     background-color: #e23636;
-  }
+}
   
   @keyframes blinker {
     100% {
         background-color: grey;
     }
-  }
+}
 
 .btn-stop:active {
     background-color: #b14242;

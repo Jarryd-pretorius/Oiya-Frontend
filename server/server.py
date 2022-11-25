@@ -29,6 +29,7 @@ async def start_server():
     print("server started!")
     await websockets.serve(new_client_connected, "localhost", 8500)
 
+
 if __name__ == '__main__':
     event_loop = asyncio.get_event_loop()
     event_loop.run_until_complete(start_server())

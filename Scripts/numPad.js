@@ -27,7 +27,6 @@ const NumPad = {
         this.elements.keysContainer.classList.add("keyboard__keys");
         this.elements.textArea.classList.add("numPad-text", "keyboard--hidden");
         this.elements.textArea.id = "numPad-text"
-        this.elements.textArea.placeHolder = "numPad-text"
         this.elements.keysContainer.appendChild(this._createKeys());
 
         this.elements.keys = this.elements.keysContainer.querySelectorAll(".keyboard__key");

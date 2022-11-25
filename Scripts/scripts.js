@@ -73,3 +73,16 @@ function renderTableData (obj) {
     
     tableBody.innerHTML = html
 }
+
+function renderColor(tagValue, tagNumber) {
+
+    if(tagNumber >= 6 && tagValue === 1 ) {
+        return "warning"
+    }
+
+    if(tagNumber < 6 && tagValue !== 1 ) {
+        return "disabled"
+    }
+
+    return "Normal"
+}

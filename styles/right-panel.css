@@ -20,3 +20,21 @@
     width: 10vh;
     height: 10vh;
 }
+
+.machine-image {
+    margin-left: 2rem;
+    width: 40%;
+    height: 100%;
+}
+
+#motor-icon {
+    display: flex;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    bottom: 34%;
+}
+
+#motor-icon .motor-0 {
+    fill: aqua;
+}

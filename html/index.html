@@ -40,24 +40,46 @@
                     </div>
                 </div>
                 <div class="center-panel-main" style="flex-direction: row;" id="centerPanel">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                            <th>Description</th>
-                            <th>Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-data">
-
-                        </tbody>
-                    </table>
-                    <div class="input-container">
-                        <h3>Description</h3>
-                        <textarea id="description" class="use-keyboard-input text-area" placeholder="enter text..." ></textarea>
-                        <h3>Amount</h3>
-                        <textarea  id="amount" class="use-numPad-input text-area" placeholder="enter amount.."></textarea>
-                        <button style="margin-top: 0;" class="btn-standard" id="data-button">Enter data</button>
+                    <div class="circle-indicator" id="indicator-1">1</div>
+                    <div class="circle-indicator" id="indicator-2">2</div>
+                    <div class="circle-indicator" id="indicator-3">3</div>
+                    <div class="circle-indicator" id="indicator-4">4</div>
+                    <div class="circle-indicator" id="indicator-5">5</div>
+                    <div class="circle-indicator" id="indicator-6">6</div>
+                    <div class="circle-indicator" id="indicator-7">7</div>
+                    <div class="machine-measurement-container">
+                        <div class="measurement-data">
+                            <div class="title">Winder Vertical Position</div>
+                            <div id="winder-positions"><span>mm</span></div>
+                        </div>
+                        <div class="measurement-data">
+                            <div class="title">Winder Motor</div>
+                            <div id="motor-rotations"><span>deg</span></div>
+                        </div>
                     </div>
+                    <img src="../images/former.png" alt="Oiya logo" class="machine-image">
+                    <div class="sequence-container">
+                        <div class="title">Main sequence</div>
+                        <div class="sequence-stage">initialize</div>
+                        <div class="sequence-stage">Ready waiting to start</div>
+                        <div class="sequence-stage">Move to start position</div>
+                        <div class="sequence-stage">Load Request and Home Winder Servo</div>
+                        <div class="sequence-stage">Handshake R220, R320 and R110</div>
+                        <div class="sequence-stage">Advance spanner carriage</div>
+                        <div class="sequence-stage">Advance spanner to insert nut and washer</div>
+                        <div class="sequence-stage">Lower winder to engage pier head</div>
+                        <div class="sequence-stage">Open clamps</div>
+                        <div class="sequence-stage">Request winder to bottom position</div>
+                        <div class="sequence-stage">Request winder to final pos</div>
+                        <div class="sequence-stage">Retract spanner and raise winder</div>
+                        <div class="sequence-stage">Winder Servo Home</div>
+                        <div class="sequence-stage">Handshake R110</div>
+                        <div class="sequence-stage">Open Door</div>
+
+
+
+                    </div>
+                    
                 </div>
                 <div class="footer">
                     <a href="./" class = "link">
@@ -75,11 +97,16 @@
                         Controls
                         </Button>
                     </a>
-                    <button class="btn-standard large-button" onclick="openData()">Data</button>
+                    <a href="./settings.html" target="_blank" class = "link">
+                        <Button class="btn-standard large-button">
+                        settings
+                        </Button>
+                    </a>
+                    <button class="btn-standard large-button" onclick="openData()" >Data</button>
                 </div>
             </div>
             <div class="right-panel">
-                <button id="alarm" class="alarm-inactive" >
+                <button id="alarm" class="alarm-inactive"  onclick="goAlack()">
                     <div>Alarm</div>
                     <div><ion-icon name="alert-circle"></ion-icon></div>
                 </button>
@@ -96,23 +123,15 @@
                     <span>Reset</span>
                     <ion-icon name="arrow-redo-circle"></ion-icon>
                 </button>
-                <button class="btn-standard">
-                    <span>Load Coil</span>
-                    <ion-icon name="download"></ion-icon>
-                </button>
-                <button class="btn-standard" onclick="updateMachineStatus('Automatic')">
-                    <span>Automatic</span>
-                </button>
-                <button class="btn-standard" onclick="updateMachineStatus('Manual')">
-                    <span>Manual</span>
-                </button>
                 <img class="oiya-logo" src="../images/OIYAicon.png" alt="Oiya logo">
             </div>
         </div>
         <script src="../Scripts/scripts.js"></script>
         <script src="../Scripts/keyboard.js" ></script>
         <script src="../Scripts/numPad.js"></script>
+        <script src="../gearhead/extSample/mcode.js"></script> 
         <script src="../Scripts/server.js"></script>
+        <script src="../Scripts/gearheadClient.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>

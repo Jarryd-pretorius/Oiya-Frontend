@@ -3,7 +3,7 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
  }
 
 .app-container {
@@ -20,6 +20,17 @@
     width: 100%;
 }
 
+.settings-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.button-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .center-panel {
     display: flex;
     flex-direction: column;
@@ -30,11 +41,100 @@
 
 .center-panel-main {
     display: flex;
-    padding-top: 1.5rem;
-    flex-direction: row;
     height: 100%;
 }
 
+.machine-measurement-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 20%;
+    height: 80%;
+}
+
+.measurement-data {
+    display: flex;
+    padding: 1rem;
+    border-radius: 5px;
+    flex-direction: column;
+    font-size: 1.2rem;
+    width: 100%;
+    gap: 0.25rem;
+    background-color: #676262;
+}
+
+.sequence-container {
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    padding: 1rem 1rem;
+    flex-direction: column;
+    width: 20%;
+    gap: 0.5rem;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    background-color: #4a4848;
+
+}
+
+.sequence-stage {
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.circle-indicator {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(211, 150, 35);
+}
+
+#indicator-1 {
+    top: 45%;
+    left: 36%;
+}
+
+#indicator-2 {
+    top:55%;
+    left: 36%;
+}
+
+#indicator-3 {
+    top: 45%;
+    left: 40%;
+}
+
+#indicator-4 {
+    top: 55%;
+    left: 40%;
+}
+
+#indicator-5 {
+    top:62%;
+    left: 33%;
+}
+
+#indicator-6 {
+    top: 30%;
+    left: 36%;
+}
+
+#indicator-7 {
+    top: 30%;
+    left: 41%;
+}
 .center-panel-main#centerPanel.active {
     filter: blur(5px);
     pointer-events: none;
