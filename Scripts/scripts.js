@@ -77,12 +77,12 @@ function renderTableData (obj) {
 function renderColor(tagValue, tagNumber) {
 
     if(tagNumber >= 6 && tagValue === 1 ) {
-        return "warning"
+        return "machine-warning"
     }
 
     if(tagNumber < 6 && tagValue !== 1 ) {
-        return "disabled"
+        return "machine-disabled"
     }
 
-    return "Normal"
+    return "machine-normal"
 }
