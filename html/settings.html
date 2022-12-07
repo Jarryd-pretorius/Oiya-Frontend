@@ -12,98 +12,169 @@
     </head>
     <body>
         <div class="app-container">
-            <div class="settings-container">
-                <div class="button-column">
-                    <button class="btn-standard large-button">
-                        <span>WinderHomePos</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>StartBottomVel</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>WinderAcc</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>WinderBottomVel</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>WinderFinalVel</span>
-                    </button>
+            <div class="center-container">
+                <div class="header">
+                    <div class="status-container">
+                        <div class="safety-status">Safety tripped</div>
+                        <div class="popuptext" id="myPopup"></div>
+                        <div id="machine-status" class="machine-status"></div>
+                    </div>
+                    <div class="machine-data-popup" id="dataPopup">
+                        <div class="Automatic">Machine Data: 1000 RPM</div>
+                        <div class="machine-data-container">
+                            <button class="btn-standard"> < Reverse</button>
+                            <button class="btn-standard">Forward ></button>
+                        </div>
+                        <div class="machine-data-container">
+                            <textarea id="acceleration" class="use-numPad-input text-area" placeholder="Acceleration..." ></textarea>
+                            <button class="btn-standard">Enter acceleration</button>
+                        </div>
+                        <div class="machine-data-container">
+                            <textarea id="acceleration" class="use-numPad-input text-area" placeholder="Speed..." ></textarea>
+                            <button class="btn-standard">Enter speed</button>
+                        </div>
+                    </div>
+                    <div class="data-container">
+                        <div class="Safety-data">Status normal...</div>
+                        <div class="operator">Logged in user - Operator</div>
+                    </div>
                 </div>
-                <div class="button-column">
-                    <button class="btn-standard large-button">
-                        <span>WinderEngageVel</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>CylEngagePos</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>CylBottomPos</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>CylFinalPos</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>hmiStartPB</span>
-                    </button>
+                <div class="center-panel-main" style="flex-direction: row;" id="centerPanel">
+                            <div class="button-column">
+                                <button class="btn-standard large-button">
+                                    <span>WinderHomePos</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>StartBottomVel</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>WinderAcc</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>WinderBottomVel</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>WinderFinalVel</span>
+                                </button>
+                            </div>
+                            <div class="button-column">
+                                <button class="btn-standard large-button">
+                                    <span>WinderEngageVel</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>CylEngagePos</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>CylBottomPos</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>CylFinalPos</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>hmiStartPB</span>
+                                </button>
+                            </div>
+                            <div class="button-column">
+                                <button class="btn-standard large-button">
+                                    <span>hmiResetPB</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>StartBottomVel</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>R100BatchCTU.PV</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>R100BatchCTU.CV</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>R100BatchCTU.Q</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>BottomVel</span>
+                                </button>
+                            </div>
+                            <div class="button-column">
+                                <button class="btn-standard large-button">
+                                    <span>lrActualPosition</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>lrActualVelocity</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>lrActualTorque</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>usiErrorSubID</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>xReady</span>
+                                </button>
+                            </div>
+                            <div class="button-column">
+                                <button class="btn-standard large-button">
+                                    <span>xError</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>xWarning</span>
+                                </button>
+                                <button class="btn-standard large-button">
+                                    <span>xReferenced</span>
+                                </button>
+                            </div>
                 </div>
-                <div class="button-column">
-                    <button class="btn-standard large-button">
-                        <span>hmiResetPB</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>StartBottomVel</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>R100BatchCTU.PV</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>R100BatchCTU.CV</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>R100BatchCTU.Q</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>BottomVel</span>
-                    </button>
+                <div class="footer">
+                    <a href="./" class = "link">
+                        <Button class="btn-standard large-button">
+                        Main
+                        </Button>
+                    </a>
+                    <!-- <a href="./logs.html" class = "link">
+                        <Button class="btn-standard large-button">
+                        Alarm log
+                        </Button>
+                    </a>
+                    <a href="./control.html">
+                        <Button class="btn-standard large-button">
+                        Controls
+                        </Button>
+                    </a> -->
+                    <a href="./settings.html" class = "link">
+                        <Button class="btn-standard large-button">
+                        settings
+                        </Button>
+                    </a>
+                    <!-- <button class="btn-standard large-button" onclick="openData()" >Data</button> -->
                 </div>
-                <div class="button-column">
-                    <button class="btn-standard large-button">
-                        <span>lrActualPosition</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>lrActualVelocity</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>lrActualTorque</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>usiErrorSubID</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>xReady</span>
-                    </button>
-                </div>
-                <div class="button-column">
-                    <button class="btn-standard large-button">
-                        <span>xError</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>xWarning</span>
-                    </button>
-                    <button class="btn-standard large-button">
-                        <span>xReferenced</span>
-                    </button>
-                </div>
+            </div>
+            <div class="right-panel">
+                <button id="alarm" class="alarm-inactive"  onclick="goAlack()">
+                    <div>Alarm</div>
+                    <div><ion-icon name="alert-circle"></ion-icon></div>
+                </button>
+                <button class="btn-start">
+                    <span>Start</span>
+                    <span><ion-icon name="play"></ion-icon></span>
+
+                </button>
+                <button class="btn-stop">
+                    <span>Stop</span>
+                    <ion-icon name="stop-circle"></ion-icon>
+                </button>
+                <button class="btn-standard">
+                    <span>Reset</span>
+                    <ion-icon name="arrow-redo-circle"></ion-icon>
+                </button>
+                <img class="oiya-logo" src="../images/OIYAicon.png" alt="Oiya logo">
             </div>
         </div>
         <script src="../Scripts/scripts.js"></script>
         <script src="../Scripts/keyboard.js" ></script>
         <script src="../Scripts/numPad.js"></script>
+        <script src="../gearhead/extSample/mcode.js"></script> 
         <script src="../Scripts/server.js"></script>
         <script src="../Scripts/gearheadClient.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
-
